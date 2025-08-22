@@ -9,7 +9,7 @@ golang hooks for http://pre-commit.com/
 Add this to your `.pre-commit-config.yaml`
 
     - repo: https://github.com/digitalstudium/pre-commit-golang
-      rev: master
+      rev: v0.0.1
       hooks:
         - id: go-fmt
         - id: go-vet
