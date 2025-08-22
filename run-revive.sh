@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 cmd="revive -formatter friendly"
 if [[ -f revive.toml ]]
 then
