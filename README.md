@@ -1,11 +1,6 @@
-pre-commit-golang
-=================
+# pre-commit-golang
 
-:rotating_light: Please see the project sunsetting announcement:
-[Issues/98](https://github.com/dnephin/pre-commit-golang/issues/98)
-:rotating_light:
-
-----
+---
 
 golang hooks for http://pre-commit.com/
 
@@ -13,7 +8,7 @@ golang hooks for http://pre-commit.com/
 
 Add this to your `.pre-commit-config.yaml`
 
-    - repo: https://github.com/dnephin/pre-commit-golang
+    - repo: https://github.com/digitalstudium/pre-commit-golang
       rev: master
       hooks:
         - id: go-fmt
@@ -29,6 +24,8 @@ Add this to your `.pre-commit-config.yaml`
         - id: go-unit-tests
         - id: go-build
         - id: go-mod-tidy
+        - id: revive
+        - id: golines
 
 ### Available hooks
 
@@ -38,7 +35,7 @@ Add this to your `.pre-commit-config.yaml`
 - `go-imports` - Runs `goimports`, requires golang.org/x/tools/cmd/goimports
 - `go-cyclo` - Runs `gocyclo`, require https://github.com/fzipp/gocyclo
 - `validate-toml` - Runs `tomlv`, requires
-   https://github.com/BurntSushi/toml/tree/master/cmd/tomlv
+  https://github.com/BurntSushi/toml/tree/master/cmd/tomlv
 - `no-go-testing` - Checks that no files are using `testing.T`, if you want
   developers to use a different testing framework
 - `golangci-lint` - run `golangci-lint run ./...`, requires
@@ -48,3 +45,5 @@ Add this to your `.pre-commit-config.yaml`
 - `go-build` - run `go build`, requires golang
 - `go-mod-tidy` - run `go mod tidy -v`, requires golang
 - `go-mod-vendor` - run `go mod vendor`, requires golang
+- `revive` run `revive ./..`, requires https://github.com/mgechev/revive
+- `golines` run `golines -w`, requires https://github.com/mgechev/golines

@@ -104,5 +104,5 @@
   name: "golines"
   entry: golines -w
   types: [go]
-  language: "golang"
+  language: "system"
   description: "Runs `golines -w`, requires https://github.com/segmentio/golines"
