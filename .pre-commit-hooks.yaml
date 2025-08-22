@@ -108,7 +108,7 @@
   description: "Runs `golines -w`, requires https://github.com/segmentio/golines"
 - id: gofumpt
   name: "gofumpt"
-  entry: GOFUMPT_SPLIT_LONG_LINES=on gofumpt -l -w
+  entry: run-gofumpt.sh
   types: [go]
-  language: "system"
-  description: "Runs `gofumpt -l -w`, requires https://github.com/mvdan/gofumpt"
+  language: "script"
+  description: "Runs `GOFUMPT_SPLIT_LONG_LINES=on gofumpt -l -w`, requires https://github.com/mvdan/gofumpt"
